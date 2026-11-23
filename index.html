@@ -1,0 +1,380 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Card & Profil - Ria Erlina</title>
+    <!-- Import Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 50%, #ff9a9e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 28px;
+            box-shadow: 0 16px 40px 0 rgba(180, 20, 90, 0.25);
+            padding: 35px;
+            overflow: hidden;
+        }
+
+        /* Bagian Profil & Foto (Diperbesar) */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .photo-box {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 18px auto;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px dashed rgba(255, 255, 255, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .profile-section h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-section .bio-desc {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.15);
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.3px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.2s;
+        }
+
+        .contact-info a:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Layout Grid */
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            padding: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            padding-bottom: 10px;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        .item span:last-child {
+            font-weight: 700;
+            color: #fff;
+            opacity: 1;
+        }
+
+        /* Sosial Media Link & Icon Style */
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.2s, transform 0.2s;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(3px);
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .brands {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .tc-list {
+            padding-left: 18px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .tc-list li {
+            margin-bottom: 8px;
+        }
+
+        .full-card {
+            grid-column: 1 / -1;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.9;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 20px 20px;
+            margin: 20px -35px -35px -35px;
+            padding: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            .profile-section h1 {
+                font-size: 1.8rem;
+            }
+            footer {
+                margin: 20px -20px -20px -20px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profil & Kontak -->
+        <div class="profile-section">
+            <div class="photo-box">
+                <span>Upload<br>Foto</span>
+            </div>
+            <h1>Ria Erlina</h1>
+            <div class="bio-desc">15,5K FOLLOWERS TIKTOK</div>
+            <div class="contact-info">
+                <a href="https://wa.me/6285856550899" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    WhatsApp
+                </a>
+                <a href="mailto:riaerlina094@gmail.com">
+                    <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                    Email
+                </a>
+            </div>
+            <p style="margin-top: 12px; font-size: 0.85rem; opacity: 0.9;">Lokasi: Indonesia</p>
+        </div>
+
+        <div class="grid-section">
+            <!-- Akun Sosial Media -->
+            <div class="card">
+                <h3>Akun Sosial Media</h3>
+                <div class="social-list">
+                    <a href="https://www.tiktok.com/@erlinaa.99?lang=id-ID" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        TikTok: @Erlinaa99
+                    </a>
+                    <a href="https://shopee.co.id" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h6v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
+                        Shopee: @Erlinaa99
+                    </a>
+                    <a href="https://www.instagram.com/ria_erlina09/" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram: Ria Erlina
+                    </a>
+                    <a href="https://www.facebook.com/ria.erlina.524?locale=fi_FI" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.581 9 4.75V8z"/></svg>
+                        Facebook: Ria Erlina
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rate Card Video -->
+            <div class="card">
+                <h3>Rate Card Video</h3>
+                <div class="item">
+                    <span>1 Video TikTok</span>
+                    <span>Rp 20.000</span>
+                </div>
+                <div class="item">
+                    <span>7 Video / Minggu</span>
+                    <span>Rp 100.000</span>
+                </div>
+            </div>
+
+            <!-- Rate Card Live -->
+            <div class="card">
+                <h3>Rate Card Live</h3>
+                <div class="item">
+                    <span>1 Jam Live</span>
+                    <span>Rp 25.000</span>
+                </div>
+                <div class="item">
+                    <span>Paket 3 Jam Live</span>
+                    <span>Rp 70.000</span>
+                </div>
+            </div>
+
+            <!-- Brand Kerjasama -->
+            <div class="card">
+                <h3>Brand Yang Bekerjasama</h3>
+                <div class="brands">
+                    <div class="badge">Les Catino</div>
+                    <div class="badge">PVN</div>
+                    <div class="badge">Luxus</div>
+                    <div class="badge">Berkah Fashion</div>
+                </div>
+            </div>
+
+            <!-- T&C Endorsement -->
+            <div class="card full-card">
+                <h3>T&C Endorsement</h3>
+                <ol class="tc-list">
+                    <li>Tidak menerima produk diluar niche konten.</li>
+                    <li>Menerima Brief & Request Tanggal Post.</li>
+                    <li>Video Diposting paling cepat H+2 setelah menerima produk.</li>
+                    <li>Draft Dikirim H-1 sebelum video diposting.</li>
+                    <li>Hanya menerima 1x revisi.</li>
+                    <li>Tidak Ada Jaminan FYP karena itu diluar kuasa saya.</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Ria Erlina. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
